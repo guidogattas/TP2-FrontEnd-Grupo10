@@ -30,6 +30,14 @@ export const bitacoraEntries = [
         titulo: "Organización de efectos de sonido (SFX) y módulo helper de audio",
         resumen: "Migración de audios arcade a public/sounds/ y función centralizada.",
         detalle: "Organizamos los archivos de sonido del proyecto (coin, pacman, radar-scan, cowabunga) dentro de la carpeta 'public/sounds/'. Implementamos un módulo helper 'sfx.js' para controlar las reproducciones de audio de forma limpia en los eventos de React."
+    },
+    {
+        id: 5,
+        fecha: "08/10/2026",
+        fase: "Portada y Responsive",
+        titulo: "Creación de catálogo JSON de 20 registros, Home e integración responsive",
+        resumen: "Base de datos local, maquetado de Home y adaptación a celulares.",
+        detalle: "Se creó la base local 'juegos.json' con 20 registros arcade, descargamos todas las imágenes. Maquetamos 'Home.jsx' ajustando tipografías neón e integrando media queries globales en CSS para una correcta visualización en móviles (400px), tablets (900px) y escritorio (1200px)."
     }
 ];
 

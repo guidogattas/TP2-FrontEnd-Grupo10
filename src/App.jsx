@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
-import './styles/main.css';
+import Home from './pages/Home';
 import Bitacora from './pages/Bitacora';
+import './styles/main.css';
 
-// Vistas Placeholder temporales
-const Home = () => <div><h1>🎮 Portada del Equipo (Grupo 10)</h1><p>En desarrollo...</p></div>;
+// Placeholders restantes
 const Perfiles = () => <div><h1>👥 Perfiles de Integrantes</h1><p>En desarrollo...</p></div>;
 const Catalogo = () => <div><h1>🕹️ Catálogo Arcade (JSON Local)</h1><p>En desarrollo...</p></div>;
 const ApiCine = () => <div><h1>🎬 API Pública de Cine y Shows</h1><p>En desarrollo...</p></div>;

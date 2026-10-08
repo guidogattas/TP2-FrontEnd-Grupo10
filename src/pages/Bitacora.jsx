@@ -5,7 +5,14 @@ export default function Bitacora() {
     const [faseFiltro, setFaseFiltro] = useState('TODAS');
     const [abiertoId, setAbiertoId] = useState(null);
 
-    const fases = ['TODAS', 'Planificación', 'Infraestructura', 'Maquetado Base', 'Recursos y SFX'];
+    const fases = [
+        'TODAS',
+        'Planificación',
+        'Infraestructura',
+        'Maquetado Base',
+        'Recursos y SFX',
+        'Portada y Responsive'
+    ];
 
     const entradasFiltradas = faseFiltro === 'TODAS'
         ? bitacoraData
