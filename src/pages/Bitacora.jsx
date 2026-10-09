@@ -11,7 +11,8 @@ export default function Bitacora() {
         'Infraestructura',
         'Maquetado Base',
         'Recursos y SFX',
-        'Portada y Responsive'
+        'Portada y Responsive',
+        'Catálogo y Perfiles'
     ];
 
     const entradasFiltradas = faseFiltro === 'TODAS'

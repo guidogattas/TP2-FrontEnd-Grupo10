@@ -35,9 +35,17 @@ export const bitacoraEntries = [
         id: 5,
         fecha: "08/10/2026",
         fase: "Portada y Responsive",
-        titulo: "Creación de catálogo JSON de 20 registros, Home e integración responsive",
+        titulo: "Creación de catálogo JSON de 26 registros, Home e integración responsive",
         resumen: "Base de datos local, maquetado de Home y adaptación a celulares.",
-        detalle: "Se creó la base local 'juegos.json' con 20 registros arcade, descargamos todas las imágenes. Maquetamos 'Home.jsx' ajustando tipografías neón e integrando media queries globales en CSS para una correcta visualización en móviles (400px), tablets (900px) y escritorio (1200px)."
+        detalle: "Se creó la base local 'juegos.json' con 26 registros arcade y retro. Maquetamos 'Home.jsx' ajustando tipografías neón e integrando media queries globales en CSS para una correcta visualización en móviles (400px), tablets (900px) y escritorio (1200px)."
+    },
+    {
+        id: 6,
+        fecha: "09/10/2026",
+        fase: "Catálogo y Perfiles",
+        titulo: "Desarrollo del catálogo dinámico, perfiles de integrantes y disparadores SFX",
+        resumen: "Buscador en tiempo real, filtro por género, modales y tarjetas de perfil con audio.",
+        detalle: "Desarrollamos 'CatalogoJSON.jsx' consumiendo la lista extendida de 26 videojuegos con búsqueda en tiempo real, select de género y modal. Creamos la sección 'Perfiles.jsx' con componentes reutilizables 'PerfilCard.jsx' parametrizados por props y botones disparadores de efectos de sonido."
     }
 ];
 
