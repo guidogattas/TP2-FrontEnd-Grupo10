@@ -12,14 +12,14 @@ export default function Home() {
     return (
         <div className="section-container" style={{ maxWidth: '1100px', margin: '0 auto' }}>
 
-            {/* Banner Principal */}
+            {/* Banner Principal & Presentación del Equipo */}
             <section style={{
                 backgroundColor: 'var(--card-bg)',
                 border: '3px solid var(--neon-pink)',
                 borderRadius: '8px',
-                padding: '1.5rem',
+                padding: '2rem 1.5rem',
                 textAlign: 'center',
-                marginBottom: '2rem',
+                marginBottom: '2.5rem',
                 boxShadow: '0 0 15px rgba(255, 0, 127, 0.3)'
             }}>
                 <p style={{ color: 'var(--neon-yellow)', fontFamily: 'var(--font-arcade)', fontSize: '0.75rem', marginBottom: '0.8rem', lineHeight: '1.4' }}>
@@ -29,7 +29,7 @@ export default function Home() {
                 <h1 style={{
                     fontFamily: 'var(--font-arcade)',
                     color: 'var(--neon-cyan)',
-                    fontSize: 'clamp(1.1rem, 3vw, 1.8rem)',
+                    fontSize: 'clamp(1.2rem, 3vw, 1.8rem)',
                     marginBottom: '1.2rem',
                     lineHeight: '1.5',
                     textShadow: '0 0 10px var(--neon-cyan)'
@@ -37,9 +37,27 @@ export default function Home() {
                     🕹️ GRUPO 10 <br /> RETRO ARCADE SPA
                 </h1>
 
-                <p style={{ color: 'var(--text-color)', fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto 1.5rem auto', lineHeight: '1.4' }}>
-                    Bienvenid@s a nuestra Single Page Application en <strong>React + Vite</strong>. Fusionamos la estética neón de los 80s/90s con arquitectura de componentes dinámicos.
-                </p>
+                {/* Presentación en tono natural/humano */}
+                <div style={{
+                    backgroundColor: '#0d041a',
+                    border: '1px solid var(--neon-cyan)',
+                    borderRadius: '6px',
+                    padding: '1.2rem',
+                    maxWidth: '850px',
+                    margin: '0 auto 1.5rem auto',
+                    textAlign: 'left',
+                    lineHeight: '1.6'
+                }}>
+                    <h2 style={{ color: 'var(--neon-yellow)', fontFamily: 'var(--font-arcade)', fontSize: '0.9rem', marginBottom: '0.8rem' }}>
+                        👾 SOBRE NOSOTROS Y EL PROYECTO
+                    </h2>
+                    <p style={{ color: 'var(--text-color)', marginBottom: '0.8rem', fontSize: '1rem' }}>
+                        Somos el <strong>Grupo 10</strong>. Cursamos la carrera de Desarrollo de Software y armamos este proyecto combinando dos cosas que nos gustan: la tecnología web moderna y la estética retro de fichines/arcades.
+                    </p>
+                    <p style={{ color: 'var(--text-color)', fontSize: '1rem' }}>
+                        En esta app vas a encontrar un catálogo interactivo con filtro de juegos retro, un buscador de pelis en tiempo real consumiendo la OMDb API, la bitácora donde registramos nuestro avance y los perfiles de cada uno de nosotros.
+                    </p>
+                </div>
 
                 <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                     <Link
@@ -77,7 +95,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Integrantes - Grilla 2x2 con links directos */}
+            {/* Tarjetas de Integrantes */}
             <section style={{ marginBottom: '2.5rem' }}>
                 <h2 style={{ fontFamily: 'var(--font-arcade)', color: 'var(--neon-yellow)', fontSize: '1.1rem', marginBottom: '1.5rem', textAlign: 'center' }}>
                     👾 INTEGRANTES DEL EQUIPO
