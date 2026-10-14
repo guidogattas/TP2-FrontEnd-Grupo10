@@ -46,6 +46,14 @@ export const bitacoraEntries = [
         titulo: "Desarrollo del catálogo dinámico, perfiles de integrantes y disparadores SFX",
         resumen: "Buscador en tiempo real, filtro por género, modales y tarjetas de perfil con audio.",
         detalle: "Desarrollamos 'CatalogoJSON.jsx' consumiendo la lista extendida de 26 videojuegos con búsqueda en tiempo real, select de género y modal. Creamos la sección 'Perfiles.jsx' con componentes reutilizables 'PerfilCard.jsx' parametrizados por props y botones disparadores de efectos de sonido."
+    },
+    {
+        id: 7,
+        fecha: "13/10/2026",
+        fase: "Consumo de API",
+        titulo: "Integración de la OMDb API con fetch, popularidad y consulta de streaming",
+        resumen: "Buscador de cine/series en tiempo real ordenado por popularidad en IMDb y disponibilidad en streaming en Argentina.",
+        detalle: "Implementamos 'ApiCine.jsx' consumiendo la OMDb API mediante peticiones asincrónicas con fetch y clave de entorno (VITE_OMDB_API_KEY). Se parametrizó la búsqueda para ordenar automáticamente los resultados por nivel de popularidad (votos acumulados en IMDb) y puntuación. Además, incorporamos enlaces dinámicos a JustWatch Argentina integrados en una cápsula neón oscura amigable, y sinopsis expandible con interacción 'Leer más / Leer menos'. Mejoramos también varios aspectos generales como imágenes de los perfiles y cambios de algunos textos."
     }
 ];
 

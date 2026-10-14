@@ -3,10 +3,10 @@ import { playSFX } from '../utils/sfx';
 
 export default function Home() {
     const integrantes = [
-        { id: 'guido', nombre: 'Guido Gattás', rol: 'Lead Dev / Repo Owner', avatar: '/img/guido-avatar.png' },
-        { id: 'lucas', nombre: 'Lucas Katz', rol: 'Front-End Dev', avatar: '/img/lucas-avatar.png' },
-        { id: 'belen', nombre: 'Belén Gatto', rol: 'UI/UX & Front-End', avatar: '/img/belen-avatar.png' },
-        { id: 'gonzalo', nombre: 'Gonzalo Santini', rol: 'Front-End Dev', avatar: '/img/gonzalo-avatar.png' },
+        { id: 'guido', nombre: 'Guido Gattás', rol: 'Front-End / SPA Architecture', avatar: '/img/avatar-guido2.jpeg' },
+        { id: 'lucas', nombre: 'Lucas Katz', rol: 'Front-End / Responsive & Styles', avatar: '/img/avatar-lucas.png' },
+        { id: 'belen', nombre: 'Belén Gatto', rol: 'Front-End / UI & Layout Design', avatar: '/img/avatar-belen.jpeg' },
+        { id: 'gonzalo', nombre: 'Gonzalo Santini', rol: 'Front-End / Routing & Data', avatar: '/img/avatar-gonzalo.jpg' },
     ];
 
     return (
@@ -77,13 +77,19 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Integrantes */}
+            {/* Integrantes - Grilla 2x2 */}
             <section style={{ marginBottom: '2.5rem' }}>
-                <h2 style={{ fontFamily: 'var(--font-arcade)', color: 'var(--neon-yellow)', fontSize: '1.1rem', marginBottom: '1.5rem' }}>
+                <h2 style={{ fontFamily: 'var(--font-arcade)', color: 'var(--neon-yellow)', fontSize: '1.1rem', marginBottom: '1.5rem', textAlign: 'center' }}>
                     👾 INTEGRANTES DEL EQUIPO
                 </h2>
 
-                <div className="cards-grid">
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                    gap: '1.5rem',
+                    maxWidth: '900px',
+                    margin: '0 auto'
+                }}>
                     {integrantes.map((persona) => (
                         <div
                             key={persona.id}
@@ -98,10 +104,10 @@ export default function Home() {
                             <img
                                 src={persona.avatar}
                                 alt={persona.nombre}
-                                onError={(e) => { e.target.src = 'https://via.placeholder.com/120?text=Avatar'; }}
+                                onError={(e) => { e.target.src = 'https://placehold.co/120x120/190a35/00f0ff?text=Avatar'; }}
                                 style={{
-                                    width: '90px',
-                                    height: '90px',
+                                    width: '100px',
+                                    height: '100px',
                                     borderRadius: '50%',
                                     border: '2px solid var(--neon-pink)',
                                     objectFit: 'cover',
@@ -128,7 +134,7 @@ export default function Home() {
                                     borderRadius: '4px'
                                 }}
                             >
-                                VER PERFIL →
+                                VER PERFILES →
                             </Link>
                         </div>
                     ))}

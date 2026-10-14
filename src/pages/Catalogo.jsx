@@ -2,7 +2,7 @@ import { useState } from 'react';
 import juegosData from '../data/juegos.json';
 import { playSFX } from '../utils/sfx';
 
-export default function CatalogoJSON() {
+export default function Catalogo() {
   const [busqueda, setBusqueda] = useState('');
   const [generoSeleccionado, setGeneroSeleccionado] = useState('TODOS');
   const [juegoModal, setJuegoModal] = useState(null);
@@ -13,7 +13,7 @@ export default function CatalogoJSON() {
   // Filtro combinado en tiempo real
   const juegosFiltrados = juegosData.filter((juego) => {
     const coincideTexto = juego.titulo.toLowerCase().includes(busqueda.toLowerCase()) ||
-                          juego.desarrollador.toLowerCase().includes(busqueda.toLowerCase());
+      juego.desarrollador.toLowerCase().includes(busqueda.toLowerCase());
     const coincideGenero = generoSeleccionado === 'TODOS' || juego.genero === generoSeleccionado;
     return coincideTexto && coincideGenero;
   });
@@ -147,21 +147,33 @@ export default function CatalogoJSON() {
             }}
           >
             <div>
-              <img
-                src={juego.imagen}
-                alt={juego.titulo}
-                onError={(e) => {
-                  e.target.src = `https://placehold.co/400x300/190a35/00f0ff?text=${encodeURIComponent(juego.titulo)}`;
-                }}
-                style={{
-                  width: '100%',
-                  height: '160px',
-                  objectFit: 'cover',
-                  borderRadius: '4px',
-                  marginBottom: '0.8rem',
-                  border: '1px solid var(--neon-cyan)'
-                }}
-              />
+              {/* Contenedor de carátula vertical sin recortar */}
+              <div style={{
+                width: '100%',
+                aspectRatio: '2 / 3',
+                backgroundColor: '#0f051d',
+                overflow: 'hidden',
+                borderRadius: '4px',
+                marginBottom: '0.8rem',
+                border: '1px solid var(--neon-cyan)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <img
+                  src={juego.imagen}
+                  alt={juego.titulo}
+                  onError={(e) => {
+                    e.target.src = `https://placehold.co/400x600/190a35/00f0ff?text=${encodeURIComponent(juego.titulo)}`;
+                  }}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain'
+                  }}
+                />
+              </div>
+
               <span style={{ fontSize: '0.85rem', color: 'var(--neon-yellow)' }}>
                 {juego.anio} — {juego.genero}
               </span>
@@ -219,14 +231,30 @@ export default function CatalogoJSON() {
               {juegoModal.titulo}
             </h2>
 
-            <img
-              src={juegoModal.imagen}
-              alt={juegoModal.titulo}
-              onError={(e) => {
-                e.target.src = `https://placehold.co/400x300/190a35/00f0ff?text=${encodeURIComponent(juegoModal.titulo)}`;
-              }}
-              style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem', border: '1px solid var(--neon-pink)' }}
-            />
+            {/* Carátula completa dentro del modal */}
+            <div style={{
+              width: '100%',
+              maxHeight: '320px',
+              aspectRatio: '2 / 3',
+              backgroundColor: '#0f051d',
+              borderRadius: '4px',
+              marginBottom: '1rem',
+              border: '1px solid var(--neon-pink)',
+              overflow: 'hidden',
+              margin: '0 auto 1rem auto',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}>
+              <img
+                src={juegoModal.imagen}
+                alt={juegoModal.titulo}
+                onError={(e) => {
+                  e.target.src = `https://placehold.co/400x600/190a35/00f0ff?text=${encodeURIComponent(juegoModal.titulo)}`;
+                }}
+                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+              />
+            </div>
 
             <p style={{ color: 'var(--text-color)', marginBottom: '1rem', lineHeight: '1.4' }}>
               {juegoModal.descripcion}
