@@ -77,7 +77,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Integrantes - Grilla 2x2 */}
+            {/* Integrantes - Grilla 2x2 con links directos */}
             <section style={{ marginBottom: '2.5rem' }}>
                 <h2 style={{ fontFamily: 'var(--font-arcade)', color: 'var(--neon-yellow)', fontSize: '1.1rem', marginBottom: '1.5rem', textAlign: 'center' }}>
                     👾 INTEGRANTES DEL EQUIPO
@@ -121,7 +121,7 @@ export default function Home() {
                                 {persona.rol}
                             </p>
                             <Link
-                                to="/perfiles"
+                                to={`/perfiles/${persona.id}`}
                                 onClick={() => playSFX('coin')}
                                 style={{
                                     display: 'inline-block',
@@ -134,7 +134,7 @@ export default function Home() {
                                     borderRadius: '4px'
                                 }}
                             >
-                                VER PERFILES →
+                                VER PERFIL →
                             </Link>
                         </div>
                     ))}
