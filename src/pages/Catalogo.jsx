@@ -2,19 +2,47 @@ import { useState } from 'react';
 import juegosData from '../data/juegos.json';
 import { playSFX } from '../utils/sfx';
 
+// Agrupa los géneros originales en categorías más amplias para el filtro.
+const categoriaPorGenero = (genero) => {
+  const g = genero.toLowerCase();
+
+  if (/fps|disparos|accion|acción|run and gun/.test(g)) return 'Acción y disparos';
+  if (/aventura gráfica/.test(g)) return 'Aventura gráfica';
+  if (/deportes|skate/.test(g)) return 'Deportes';
+  if (/peleas|beat 'em up/.test(g)) return 'Peleas';
+  if (/carreras|destruccion|destrucción/.test(g)) return 'Carreras';
+  if (/plataformas|maze|arcade/.test(g)) return 'Arcade y plataformas';
+  if (/estrategia|puzle/.test(g)) return 'Estrategia y puzles';
+  if (/survival horror/.test(g)) return 'Terror y supervivencia';
+  return 'Otros';
+};
+
 export default function Catalogo() {
   const [busqueda, setBusqueda] = useState('');
   const [generoSeleccionado, setGeneroSeleccionado] = useState('TODOS');
   const [juegoModal, setJuegoModal] = useState(null);
 
-  // Extraer géneros únicos dinámicamente
-  const generos = ['TODOS', ...new Set(juegosData.map((j) => j.genero))];
+  // Lista fija de categorías resumidas que se muestran en el filtro.
+  const generos = [
+    'TODOS',
+    'Acción y disparos',
+    'Aventura gráfica',
+    'Arcade y plataformas',
+    'Peleas',
+    'Carreras',
+    'Deportes',
+    'Estrategia y puzles',
+    'Terror y supervivencia',
+    'Otros'
+  ];
 
-  // Filtro combinado en tiempo real
+  // Búsqueda por título/desarrollador y filtro por categoría agrupada.
   const juegosFiltrados = juegosData.filter((juego) => {
-    const coincideTexto = juego.titulo.toLowerCase().includes(busqueda.toLowerCase()) ||
-      juego.desarrollador.toLowerCase().includes(busqueda.toLowerCase());
-    const coincideGenero = generoSeleccionado === 'TODOS' || juego.genero === generoSeleccionado;
+    const texto = busqueda.toLowerCase();
+    const coincideTexto = juego.titulo.toLowerCase().includes(texto) ||
+      juego.desarrollador.toLowerCase().includes(texto);
+    const coincideGenero = generoSeleccionado === 'TODOS' ||
+      categoriaPorGenero(juego.genero) === generoSeleccionado;
     return coincideTexto && coincideGenero;
   });
 
@@ -175,7 +203,7 @@ export default function Catalogo() {
               </div>
 
               <span style={{ fontSize: '0.85rem', color: 'var(--neon-yellow)' }}>
-                {juego.anio} — {juego.genero}
+                {juego.anio} — {categoriaPorGenero(juego.genero)}
               </span>
               <h3 style={{ color: 'var(--text-color)', fontSize: '1.4rem', margin: '0.3rem 0' }}>
                 {juego.titulo}
@@ -262,7 +290,7 @@ export default function Catalogo() {
 
             <ul style={{ listStyle: 'none', color: 'var(--text-muted)', lineHeight: '1.8' }}>
               <li><strong>Año:</strong> {juegoModal.anio}</li>
-              <li><strong>Género:</strong> {juegoModal.genero}</li>
+              <li><strong>Género:</strong> {categoriaPorGenero(juegoModal.genero)} <span style={{ opacity: 0.7 }}>({juegoModal.genero})</span></li>
               <li><strong>Desarrollador:</strong> {juegoModal.desarrollador}</li>
               <li><strong>Plataforma:</strong> {juegoModal.plataforma}</li>
               <li><strong>Jugadores:</strong> {juegoModal.jugadores}</li>

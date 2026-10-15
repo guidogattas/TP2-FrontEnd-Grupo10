@@ -54,6 +54,14 @@ export const bitacoraEntries = [
         titulo: "Integración de la OMDb API con fetch, popularidad y consulta de streaming",
         resumen: "Buscador de cine/series en tiempo real ordenado por popularidad en IMDb y disponibilidad en streaming en Argentina.",
         detalle: "Implementamos 'ApiCine.jsx' consumiendo la OMDb API mediante peticiones asincrónicas con fetch y clave de entorno (VITE_OMDB_API_KEY). Se parametrizó la búsqueda para ordenar automáticamente los resultados por nivel de popularidad (votos acumulados en IMDb) y puntuación. Además, incorporamos enlaces dinámicos a JustWatch Argentina integrados en una cápsula neón oscura amigable, y sinopsis expandible con interacción 'Leer más / Leer menos'. Mejoramos también varios aspectos generales como imágenes de los perfiles y cambios de algunos textos."
+    },
+    {
+        id: 8,
+        fecha: "15/10/2026",
+        fase: "Optimización y QA",
+        titulo: "Rediseño responsive global, árbol de componentes y bitácora interactiva",
+        resumen: "Corrección de desbordes en layout, creación de ArbolRender y optimización de Bitácora.",
+        detalle: "Se solucionaron los problemas de desborde horizontal y centrado en el CSS global (#root y .main-content) para aprovechar toda la pantalla de escritorio junto a la Sidebar. Se desarrolló e integró la vista 'ArbolRender.jsx' con nodos recursivos colapsables para cumplir con los requisitos del TP2, y se rediseñó por completo la 'Bitácora' incorporando filtros por etapas y tarjetas desplegables con acordeón."
     }
 ];
 

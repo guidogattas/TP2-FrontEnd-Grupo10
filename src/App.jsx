@@ -6,11 +6,10 @@ import PerfilDetalle from './pages/PerfilDetalle';
 import Catalogo from './pages/Catalogo';
 import ApiCine from './pages/ApiCine';
 import Bitacora from './pages/Bitacora';
+import ArbolRender from './pages/ArbolRender';
+import NotFound from './pages/NotFound';
 import './styles/main.css';
 
-// Placeholder restante
-const Arbol = () => <div><h1>🌳 Árbol de Renderizado de Componentes</h1><p>En desarrollo...</p></div>;
-const NotFound = () => <div><h1>404 - Página No Encontrada</h1></div>;
 
 export default function App() {
   return (
@@ -22,7 +21,7 @@ export default function App() {
           <Route path="/perfiles/:id" element={<PerfilDetalle />} />
           <Route path="/catalogo" element={<Catalogo />} />
           <Route path="/api" element={<ApiCine />} />
-          <Route path="/arbol" element={<Arbol />} />
+          <Route path="/arbol" element={<ArbolRender />} />
           <Route path="/bitacora" element={<Bitacora />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

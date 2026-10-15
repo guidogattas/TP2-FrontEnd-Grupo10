@@ -9,7 +9,7 @@ export default function Layout({ children }) {
     return (
         <div className="app-layout">
             <button className="mobile-toggle" onClick={toggleSidebar}>
-                {sidebarOpen ? '✖ CERRAR' : '☰ MENÚ'}
+                {sidebarOpen ? '✖ CERRAR' : '☰ MENU'}
             </button>
 
             <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
