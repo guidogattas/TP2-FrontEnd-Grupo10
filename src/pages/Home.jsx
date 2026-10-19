@@ -37,7 +37,6 @@ export default function Home() {
                     🕹️ GRUPO 10 <br /> RETRO ARCADE SPA
                 </h1>
 
-                {/* Presentación en tono natural/humano */}
                 <div style={{
                     backgroundColor: '#0d041a',
                     border: '1px solid var(--neon-cyan)',
@@ -106,7 +105,8 @@ export default function Home() {
                     gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
                     gap: '1.5rem',
                     width: '100%',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    alignItems: 'stretch'
                 }}>
                     {integrantes.map((persona) => (
                         <div
@@ -115,8 +115,13 @@ export default function Home() {
                                 backgroundColor: 'var(--card-bg)',
                                 border: '2px solid var(--neon-cyan)',
                                 borderRadius: '6px',
-                                padding: '1.2rem',
-                                textAlign: 'center'
+                                padding: '1.5rem 1.2rem',
+                                textAlign: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                height: '100%',
+                                boxSizing: 'border-box'
                             }}
                         >
                             <img
@@ -132,10 +137,10 @@ export default function Home() {
                                     marginBottom: '1rem'
                                 }}
                             />
-                            <h3 style={{ color: 'var(--text-color)', fontSize: '1.3rem', marginBottom: '0.3rem' }}>
+                            <h3 style={{ color: 'var(--text-color)', fontSize: '1.2rem', marginBottom: '0.4rem' }}>
                                 {persona.nombre}
                             </h3>
-                            <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '1rem' }}>
+                            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.5rem', flexGrow: 1, display: 'flex', alignItems: 'center' }}>
                                 {persona.rol}
                             </p>
                             <Link
@@ -143,13 +148,14 @@ export default function Home() {
                                 onClick={() => playSFX('coin')}
                                 style={{
                                     display: 'inline-block',
-                                    padding: '0.4rem 0.8rem',
+                                    padding: '0.5rem 1rem',
                                     backgroundColor: 'var(--card-hover)',
                                     color: 'var(--neon-yellow)',
                                     border: '1px solid var(--neon-yellow)',
                                     textDecoration: 'none',
-                                    fontSize: '0.9rem',
-                                    borderRadius: '4px'
+                                    fontSize: '0.85rem',
+                                    borderRadius: '4px',
+                                    marginTop: 'auto'
                                 }}
                             >
                                 VER PERFIL →
