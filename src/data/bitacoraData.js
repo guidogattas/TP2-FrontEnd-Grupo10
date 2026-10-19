@@ -62,6 +62,14 @@ export const bitacoraEntries = [
         titulo: "Rediseño responsive global, árbol de componentes y bitácora interactiva",
         resumen: "Corrección de desbordes en layout, creación de ArbolRender y optimización de Bitácora.",
         detalle: "Se solucionaron los problemas de desborde horizontal y centrado en el CSS global (#root y .main-content) para aprovechar toda la pantalla de escritorio junto a la Sidebar. Se desarrolló e integró la vista 'ArbolRender.jsx' con nodos recursivos colapsables para cumplir con los requisitos del TP2, y se rediseñó por completo la 'Bitácora' incorporando filtros por etapas y tarjetas desplegables con acordeón."
+    },
+    {
+        id: 9,
+        fecha: "19/10/2026",
+        fase: "README y Documentación",
+        titulo: "Actualización del README.md y documentación final del proyecto",
+        resumen: "Se completó la documentación del proyecto, incluyendo instrucciones de instalación, uso y despliegue.",
+        detalle: "Se revisó y actualizó el archivo README.md para reflejar todos los cambios realizados durante el desarrollo del proyecto. Se añadieron secciones detalladas sobre la instalación, configuración, uso de la aplicación y despliegue en Vercel. Además, se documentaron las decisiones de diseño y arquitectura tomadas a lo largo del proyecto."
     }
 ];
 
