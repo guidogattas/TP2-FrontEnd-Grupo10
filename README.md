@@ -29,7 +29,7 @@ La plataforma cuenta con:
 
 ---
 
-## 🤖 Declaración de Uso de Inteligencia Artificial (Nivel Superior)
+## 🤖 Declaración de Uso de Inteligencia Artificial:
 
 Durante el ciclo de desarrollo de la SPA, el equipo utilizó herramientas de Inteligencia Artificial como soporte técnico y de diseño, de acuerdo con el siguiente desglose:
 
