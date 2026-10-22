@@ -13,7 +13,7 @@ export const bitacoraEntries = [
         fase: "Infraestructura",
         titulo: "Setup del repositorio, React Router y despliegue en Vercel",
         resumen: "Inicialización del proyecto Vite, resolución de rebase en Git y deploy.",
-        detalle: "Se creó el repositorio 'TP2-FrontEnd-Grupo10' en GitHub y se enviaron las invitaciones al equipo. Inicializamos el proyecto en local con React + Vite e instalamos 'react-router-dom'. Al vincularlo con GitHub se resolvió un conflicto de rebase con el README remoto mediante git push --force. Conectamos el repo a Vercel para deploy continuo."
+        detalle: "Se creó el repositorio 'TP2-FrontEnd-Grupo10' en GitHub y se enviaron las invitaciones al equipo. Inicializamos el proyecto en local con React + Vite e instalamos 'react-router-dom'. Conectamos el repo a Vercel para deploy continuo."
     },
     {
         id: 3,
@@ -53,7 +53,7 @@ export const bitacoraEntries = [
         fase: "Consumo de API",
         titulo: "Integración de la OMDb API con fetch, popularidad y consulta de streaming",
         resumen: "Buscador de cine/series en tiempo real ordenado por popularidad en IMDb y disponibilidad en streaming en Argentina.",
-        detalle: "Implementamos 'ApiCine.jsx' consumiendo la OMDb API mediante peticiones asincrónicas con fetch y clave de entorno (VITE_OMDB_API_KEY). Se parametrizó la búsqueda para ordenar automáticamente los resultados por nivel de popularidad (votos acumulados en IMDb) y puntuación. Además, incorporamos enlaces dinámicos a JustWatch Argentina integrados en una cápsula neón oscura amigable, y sinopsis expandible con interacción 'Leer más / Leer menos'. Mejoramos también varios aspectos generales como imágenes de los perfiles y cambios de algunos textos."
+        detalle: "Implementamos 'ApiCine.jsx' consumiendo la OMDb API mediante peticiones asincrónicas con fetch y clave de entorno (VITE_OMDB_API_KEY). Se parametrizó la búsqueda para ordenar automáticamente los resultados por nivel de popularidad (votos acumulados en IMDb) y puntuación. Además, incorporamos enlaces dinámicos a JustWatch Argentina integrados en una cápsula neón oscura, y sinopsis expandible con interacción 'Leer más / Leer menos'. Si el póster no está disponible en la API, saldrá el mensaje de POSTER NO DISPONIBLE. Mejoramos también varios aspectos generales como imágenes de los perfiles y cambios de algunos textos."
     },
     {
         id: 8,
